@@ -18,7 +18,7 @@ test('Test Case 2: No se encuentran usuarios', async ({ page }) => {
 
   //5.Ir al menú "Usuarios"
   await page.locator('mat-toolbar').getByRole('link', { name: 'Usuarios' }).click();
-
+ 
   //6.Aplicar uno o más filtros 
   await page.getByRole('combobox', { name: 'Rol' }).locator('svg').click();
   await page.getByRole('option', { name: 'CLIENTE' }).click();

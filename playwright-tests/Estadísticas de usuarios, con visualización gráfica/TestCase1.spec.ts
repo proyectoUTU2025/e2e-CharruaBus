@@ -8,7 +8,7 @@ test('Test Case 1: Visualización y descarga exitosa de estadísticas', async ({
 
   //3.Ir a la página de login
   await page.getByRole('link', { name: 'Login' }).click();
-
+ 
   //4.Iniciar sesión como administrador
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('admin@admin.com');

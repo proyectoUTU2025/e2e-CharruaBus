@@ -20,7 +20,7 @@ test('Test Case 2: Cancelar el cambio de contraseña', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito11!');
 
   //7.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
@@ -35,14 +35,14 @@ test('Test Case 2: Cancelar el cambio de contraseña', async ({ page }) => {
 
   //10.Verificar que este la sección “Cambiar contraseña”
   await expect(page.getByText('Cambiar ContraseñaActualizá')).toBeVisible();
-
+ 
   //11.ngresar la contraseña actual, la nueva contraseña y su confirmación
   await page.getByText('Contraseña Actual', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña Actual' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña Actual' }).fill('Pepito11!');
   await page.getByText('Nueva Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Nueva Contraseña', exact: true }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Nueva Contraseña', exact: true }).fill('Pepito12!');
   await page.getByText('Confirmar Nueva Contraseña').click();
-  await page.getByRole('textbox', { name: 'Confirmar Nueva Contraseña' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Confirmar Nueva Contraseña' }).fill('Pepito12!');
 
   //12.Pulsar “Cancelar”
   await expect(page.locator('app-change-password').getByRole('button', { name: 'Cancelar' })).toBeVisible();

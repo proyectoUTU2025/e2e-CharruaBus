@@ -24,7 +24,7 @@ test('Test Case 1: Cierre de sesión exitoso', async ({ page }) => {
 
   //7.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
-
+ 
   //8.Verificar que el usuario sea redirigido a la pantalla principal según su rol
   await expect(page.locator('#mat-mdc-chip-0').getByText('CLIENTE')).toBeVisible();
 

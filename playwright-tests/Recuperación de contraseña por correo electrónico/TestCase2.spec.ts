@@ -19,7 +19,7 @@ test('Test Case 2: Correo no registrado', async ({ page }) => {
   //6.Ingresar un correo no registrado
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('correo1@gmail.com');
-
+ 
   //7.Pulsar “Enviar código”
   await page.getByRole('button', { name: 'Enviar código' }).click();
 

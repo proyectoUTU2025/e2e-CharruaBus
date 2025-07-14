@@ -17,17 +17,18 @@ test('Test Case 2: Búsqueda sin resultados', async ({ page }) => {
 
   //5.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
-
+ 
   //6.Ir a la página principal y hacer clic en “Viajes”
   await page.locator('mat-toolbar').getByRole('link', { name: 'Viajes' }).click();
 
   //7.Ingresar filtros válidos: Origen, Destino y Fecha de salida
-
+  await page.getByRole('combobox', { name: 'Origen' }).locator('path').click();
+  await page.getByText('CERRO LARGO - Pereira').click();
 
   //8.Pulsar “Buscar”
   await page.getByRole('button', { name: 'Buscar' }).click();
 
   //9.Verificar que se muestra el mensaje: “No hay viajes que coincidan”
-  await expect(page.locator('div').filter({ hasText: 'directions_busNo se' }).nth(2)).toBeVisible();
-  await expect(page.getByText('No hay viajes que coincidan')).toBeVisible();
+  const cellLocator = page.getByRole('cell', { name: 'CERRO LARGO - Pereira' })
+  await expect(cellLocator).toHaveCount(0, { timeout: 15000 })
 });

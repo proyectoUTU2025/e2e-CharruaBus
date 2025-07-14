@@ -22,8 +22,17 @@ test(' Test Case 1: Búsqueda de viajes con filtros válidos', async ({ page }) 
   await page.locator('mat-toolbar').getByRole('link', { name: 'Viajes' }).click();
 
   //7.Ingresar filtros válidos: Origen, Destino y Fecha de salida
-
+  await page.getByRole('combobox', { name: 'Origen' }).locator('svg').click();
+  await page.getByRole('option', { name: 'SALTO - Salto' }).click();
 
   //8.Pulsar “Buscar”
   await page.getByRole('button', { name: 'Buscar' }).click();
+
+  //9.Verificar que se muestren los resultados de la búsqueda
+  const cellLocator = page.getByRole('cell', { name: 'SALTO - Salto' })
+  await expect(cellLocator.first()).toBeVisible({ timeout: 15000 })
+  const cells = await cellLocator.all()
+
+  await expect(cells.length).toBeGreaterThan(0);
+  
 });

@@ -12,13 +12,13 @@ test('Test Case 2: Login con correo incorrecto', async ({ page }) => {
   //4.Ir a la página de login
   await page.getByRole('link', { name: 'Login' }).click();
 
-  //5.Verificar que se muestre el formulario de login con campos "Email" y "Contraseña"
+  //5.Verificar que se muestre el formulario de login con campos "Email" y "Contraseña" 
   await expect(page.getByRole('textbox', { name: 'Email' })).toBeVisible();
   await expect(page.getByRole('textbox', { name: 'Contraseña' })).toBeVisible();
 
   //6.Ingresar un correo electrónico que no está registrado
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('correo1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('correo88@gmail.com');
 
   //7.Ingresar cualquier contraseña
   await page.getByText('Contraseña', { exact: true }).click();
@@ -28,5 +28,5 @@ test('Test Case 2: Login con correo incorrecto', async ({ page }) => {
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //9.Verificar que se muestre un mensaje de error
-  await expect(page.getByText('Credenciales inválidas')).toBeVisible();
+  await page.getByText('error_outlineCredenciales err').click();
 });

@@ -25,12 +25,7 @@ test('Test Case 1: Recuperación de contraseña exitosa', async ({ page }) => {
 
   //8.Verificar que se muestra mensaje de confirmación del envío del correo
   //9.Ingresar el codigo de verificación
-  await page.locator('.digit-input').first().fill('8');
-  await page.locator('input:nth-child(2)').fill('9');
-  await page.locator('input:nth-child(3)').fill('0');
-  await page.locator('input:nth-child(4)').fill('5');
-  await page.locator('input:nth-child(5)').fill('2');
-  await page.locator('input:nth-child(6)').fill('0');
+  await page.pause();
 
   //10.Presionar "Verificar Código" para verificar que el codigo sea valido
   await page.getByRole('button', { name: 'Verificar Código' }).click();
@@ -38,10 +33,10 @@ test('Test Case 1: Recuperación de contraseña exitosa', async ({ page }) => {
 
   //11.Ingresar una nueva contraseña y su confirmación
   await page.getByText('Nueva Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Nueva Contraseña' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Nueva Contraseña' }).fill('Pepito12!');
   await page.getByText('Confirmar Contraseña').click();
-  await page.getByRole('textbox', { name: 'Confirmar Contraseña' }).fill('Pepito11!');
-
+  await page.getByRole('textbox', { name: 'Confirmar Contraseña' }).fill('Pepito12!');
+ 
   //12.Presiona "Cambiar Contraseña"
   await page.getByRole('button', { name: 'Cambiar Contraseña' }).click();
 
@@ -49,7 +44,7 @@ test('Test Case 1: Recuperación de contraseña exitosa', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //14.Verificar que el usuario sea redirigido a la pantalla principal según su rol
