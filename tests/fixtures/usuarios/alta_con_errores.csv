@@ -1,0 +1,15 @@
+email,password,nombre,apellido,fechaNacimiento,documento,tipoDocumento,rol
+# fila 1: válida
+andres.ramirez@example.com,Test1234!,Andrés,Ramírez,1988-04-22,44556677,CEDULA,ADMIN
+# fila 2: falta password
+valentina.sanchez@example.com,,Valentina,Sánchez,1994-09-05,99887766,PASAPORTE,VENDEDOR
+# fila 3: falta apellido
+miguel.toro@example.org,M1guelToro!,Miguel,,1982-11-30,55667788,CEDULA,ADMIN
+# fila 4: tipoDocumento mal escrito
+sofia.martin@example.net,Test1234!,Sofía,Martín,1990-07-19,66778899,PASSPORTE,VENDEDOR
+# fila 5: duplicado de fila 1
+andres.ramirez@example.com,Test1234!,Andrés,Ramírez,1988-04-22,44556677,CEDULA,ADMIN
+# fila 6: válida
+alejandro.lopez@domain.com,Test1234!,Alejandro,López,1985-02-14,77889900,CEDULA,VENDEDOR
+# fila 7: email mal formado y fecha inválida
+invalid.row@example,Test1234!,Invalid,Row,not-a-date,ABC123,CEDULA,CLIENTE
