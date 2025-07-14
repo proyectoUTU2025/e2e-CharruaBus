@@ -8,7 +8,7 @@ test('Test Case 2: Datos incompletos o inválidos', async ({ page }) => {
 
   //3.Ir a la página de login
   await page.getByRole('link', { name: 'Login' }).click();
-
+ 
   //4.Iniciar sesión como administrador
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('admin@admin.com');
@@ -20,10 +20,10 @@ test('Test Case 2: Datos incompletos o inválidos', async ({ page }) => {
   await page.locator('mat-toolbar').getByRole('link', { name: 'Configuraciones' }).click();
 
   //6.Seleccionar una configuración a modificar
-  await page.getByRole('row', { name: 'horas_penalizacion 48 -' }).getByRole('button').click();
+  await page.getByRole('row', { name: 'horas_penalizacion 24 -' }).getByRole('button').click();
 
   //7.Dejar el campo vacío o ingresar un valor fuera de rango permitido
-  await page.getByRole('spinbutton', { name: 'Valor (número)' }).fill('');
+  await page.getByRole('spinbutton', { name: 'Valor Entero' }).fill('');
 
   //8.Verificar que se muestra un mensaje de error indicando el problema
   await expect(page.getByText('Debe especificar valor numé')).toBeVisible();

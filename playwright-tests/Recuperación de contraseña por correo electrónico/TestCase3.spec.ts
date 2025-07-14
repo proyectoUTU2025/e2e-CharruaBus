@@ -19,7 +19,7 @@ test('Test Case 3: Token expirado o inválido', async ({ page }) => {
   //6.Ingresar un correo registrado
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
-
+ 
   //7.Pulsar “Enviar código”
   await page.getByRole('button', { name: 'Enviar código' }).click();
 

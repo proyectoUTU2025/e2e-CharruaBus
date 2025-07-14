@@ -15,7 +15,7 @@ test('Test Case 1: Login con credenciales válidas', async ({ page }) => {
   //5.Verificar que se muestre el formulario de login con campos "Email" y "Contraseña"
   await expect(page.getByRole('textbox', { name: 'Email' })).toBeVisible();
   await expect(page.getByRole('textbox', { name: 'Contraseña' })).toBeVisible();
-
+ 
   //6.Ingresar un email y contraseña válidos
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');

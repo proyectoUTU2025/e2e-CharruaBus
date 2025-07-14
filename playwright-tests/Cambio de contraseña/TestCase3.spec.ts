@@ -11,7 +11,7 @@ test('Test Case 3: Contraseña actual incorrecta', async ({ page }) => {
 
   //4.Ir a la página de login
   await page.getByRole('link', { name: 'Login' }).click();
-
+ 
   //5.Verificar que se muestre el formulario de login con campos "Email" y "Contraseña"
   await expect(page.getByRole('textbox', { name: 'Email' })).toBeVisible();
   await expect(page.getByRole('textbox', { name: 'Contraseña' })).toBeVisible();
@@ -20,7 +20,7 @@ test('Test Case 3: Contraseña actual incorrecta', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Email' }).click();
   await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito11!');
 
   //7.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
@@ -38,7 +38,7 @@ test('Test Case 3: Contraseña actual incorrecta', async ({ page }) => {
 
   //11.Ingresar una contraseña actual incorrecta
   await page.getByText('Contraseña Actual', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña Actual' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Contraseña Actual' }).fill('Pepito12!');
 
   //12.Ingresar nueva contraseña válida y su confirmación
   await page.getByText('Nueva Contraseña', { exact: true }).click();

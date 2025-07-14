@@ -18,7 +18,7 @@ test('Test Case 1: Listado de usuarios con filtros aplicados', async ({ page }) 
 
   //5.Ir al menú "Usuarios"
   await page.locator('mat-toolbar').getByRole('link', { name: 'Usuarios' }).click();
-
+ 
   //6.Aplicar uno o más filtros válidos
   await page.getByRole('combobox', { name: 'Rol' }).locator('svg').click();
   await page.getByRole('option', { name: 'ADMIN' }).click();
