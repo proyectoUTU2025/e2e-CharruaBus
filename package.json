@@ -1,15 +1,31 @@
 {
   "name": "testing-charruabus",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "db:migrate": "node --loader ts-node/esm scripts/migrate.ts",
+    "db:seed": "node --loader ts-node/esm scripts/seed.ts",
+    "seed": "npm run db:migrate && npm run db:seed",
+    "test:e2e": "npm run seed && npx playwright test",
+    "test": "npm run test:e2e",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.54.1",
-    "@types/node": "^24.0.10",
-    "allure-playwright": "^3.3.0"
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.13",
+    "@types/pg": "^8.15.4",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.0",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "pg": "^8.16.3"
   }
 }

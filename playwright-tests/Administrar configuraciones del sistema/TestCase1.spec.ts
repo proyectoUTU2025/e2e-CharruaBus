@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.afterEach(async ({ page }) => {
-  const nombreConfiguracion = 'horas_penalizacion';
-  const valorOriginal = '24'; // Valor original de 'horas_penalizacion' según tu captura
+  const nombreConfiguracion = 'max_pasajes_por_compra';
+  const valorOriginal = '10'; // Valor original de 'max_pasajes_por_compra' según tu captura
 
   console.log(`Ejecutando cleanup: Restaurando '${nombreConfiguracion}' a '${valorOriginal}'`);
 
@@ -44,9 +44,9 @@ test('Test Case 1: Modificación exitosa de una configuración', async ({ page }
 
   //4.Iniciar sesión como administrador
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('admin@admin.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('admin@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('admin');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Admin123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
   // Opcional: Esperar a que la navegación post-login se complete, por ejemplo, esperando un elemento en el dashboard
   await expect(page.getByText('Bienvenido')).toBeVisible();
@@ -54,7 +54,7 @@ test('Test Case 1: Modificación exitosa de una configuración', async ({ page }
   //5.Acceder al menú “Configuraciones”
   await page.locator('mat-toolbar').getByRole('link', { name: 'Configuraciones' }).click();
 
-  const nombreConfiguracion = 'horas_penalizacion';
+  const nombreConfiguracion = 'max_pasajes_por_compra';
   const nuevoValor = '48'; // El valor al que el test modificará la configuración
 
   //6.Seleccionar una configuración a modificar (hacer clic en el lápiz)
