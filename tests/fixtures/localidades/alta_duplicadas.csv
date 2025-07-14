@@ -1,0 +1,8 @@
+nombre,departamento
+Rocha,ROCHA
+Treinta y Tres,TREINTA_Y_TRES
+Artigas,ARTIGAS
+Rocha,ROCHA            # duplicada de fila 1
+Soriano,INVALIDO       # departamento inválido
+Paysandú,PAYSANDU
+Treinta y Tres,TREINTA_Y_TRES  # duplicada de fila 2
