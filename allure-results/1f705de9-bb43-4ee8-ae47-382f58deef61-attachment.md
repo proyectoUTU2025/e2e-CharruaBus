@@ -1,0 +1,64 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus VENDEDOR
+- link "Ómnibus":
+  - /url: /omnibus
+- link "Localidades":
+  - /url: /localidades
+- link "Viajes":
+  - /url: /viajes
+- link "Comprar":
+  - /url: /comprar
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido VENDEDOR
+- button
+- navigation:
+  - link "Ómnibus":
+    - /url: /omnibus
+  - link "Localidades":
+    - /url: /localidades
+  - link "Viajes":
+    - /url: /viajes
+  - link "Comprar":
+    - /url: /comprar
+  - button "Estadísticas"
+  - link "Viajes por Departamento":
+    - /url: /estadisticas/viajes-departamento
+  - link "Viajes por Ómnibus":
+    - /url: /estadisticas/viajes-por-omnibus
+  - link "Mantenimientos":
+    - /url: /estadisticas/mantenimientos-por-omnibus
+  - link "Pasajes":
+    - /url: /estadisticas/estadisticas-pasajes
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- img "Charrua Bus"
+- heading "¡Hola, Test Vendedor!" [level=1]
+- paragraph: Vendedor • domingo, 13 de julio de 2025, 04:16 p. m.
+- paragraph: Bienvenido de vuelta a Charrua Bus
+- heading "Acciones Rápidas" [level=2]
+- heading "Gestionar Ómnibus" [level=3]
+- paragraph: Administrar flota de ómnibus
+- heading "Localidades" [level=3]
+- paragraph: Gestionar localidades
+- heading "Mi Perfil" [level=3]
+- paragraph: Ver y editar mi perfil
+- heading "Gestionar Viajes" [level=3]
+- paragraph: Administrar viajes y rutas
+- heading "Vender Pasajes" [level=3]
+- paragraph: Vender pasajes a clientes
+- heading "Estadísticas de Viajes" [level=3]
+- paragraph: Ver estadísticas de viajes por departamento
+- heading "Estadísticas de Ómnibus" [level=3]
+- paragraph: Ver estadísticas de viajes por ómnibus
+- heading "Estadísticas de Mantenimiento" [level=3]
+- paragraph: Ver estadísticas de mantenimiento de ómnibus
+- heading "Estadísticas de Pasajes" [level=3]
+- paragraph: Ver estadísticas de pasajes comprados
+```

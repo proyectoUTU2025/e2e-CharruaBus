@@ -1,0 +1,63 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus VENDEDOR
+- link "Ómnibus":
+  - /url: /omnibus
+- link "Localidades":
+  - /url: /localidades
+- link "Viajes":
+  - /url: /viajes
+- link "Comprar":
+  - /url: /comprar
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido VENDEDOR
+- button
+- navigation:
+  - link "Ómnibus":
+    - /url: /omnibus
+  - link "Localidades":
+    - /url: /localidades
+  - link "Viajes":
+    - /url: /viajes
+  - link "Comprar":
+    - /url: /comprar
+  - button "Estadísticas"
+  - link "Viajes por Departamento":
+    - /url: /estadisticas/viajes-departamento
+  - link "Viajes por Ómnibus":
+    - /url: /estadisticas/viajes-por-omnibus
+  - link "Mantenimientos":
+    - /url: /estadisticas/mantenimientos-por-omnibus
+  - link "Pasajes":
+    - /url: /estadisticas/estadisticas-pasajes
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Gestión de Viajes" [level=1]
+- paragraph: Administrar y crear viajes disponibles en el sistema.
+- text: Origen
+- combobox "Origen"
+- text: Destino
+- combobox "Destino"
+- text: Fecha desde
+- textbox "Fecha desde": 15/7/2025
+- button "Open calendar"
+- text: Hora
+- combobox "Hora": Sin especificar (00:00)
+- text: Fecha hasta
+- textbox "Fecha hasta": 15/8/2025
+- button "Open calendar"
+- text: Hora
+- combobox "Hora": Sin especificar (00:00)
+- button "Buscar"
+- button "Limpiar"
+- text: Lista de Viajes
+- button "Crear Viaje"
+- heading "No se encontraron viajes" [level=3]
+- paragraph: No hay viajes que coincidan con los filtros especificados.
+```

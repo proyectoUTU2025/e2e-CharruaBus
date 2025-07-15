@@ -1,0 +1,64 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus VENDEDOR
+- link "Ómnibus":
+  - /url: /omnibus
+- link "Localidades":
+  - /url: /localidades
+- link "Viajes":
+  - /url: /viajes
+- link "Comprar":
+  - /url: /comprar
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido VENDEDOR
+- button
+- navigation:
+  - link "Ómnibus":
+    - /url: /omnibus
+  - link "Localidades":
+    - /url: /localidades
+  - link "Viajes":
+    - /url: /viajes
+  - link "Comprar":
+    - /url: /comprar
+  - button "Estadísticas"
+  - link "Viajes por Departamento":
+    - /url: /estadisticas/viajes-departamento
+  - link "Viajes por Ómnibus":
+    - /url: /estadisticas/viajes-por-omnibus
+  - link "Mantenimientos":
+    - /url: /estadisticas/mantenimientos-por-omnibus
+  - link "Pasajes":
+    - /url: /estadisticas/estadisticas-pasajes
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Gestión de Localidades" [level=1]
+- paragraph: Crear y administrar localidades en el sistema.
+- text: Departamento
+- combobox "Departamento"
+- text: Nombre
+- textbox "Nombre"
+- button "Buscar"
+- button "Limpiar"
+- text: Lista de Localidades
+- button "Alta Masiva"
+- button "Crear Localidad"
+- progressbar
+- paragraph: Cargando localidades...
+- dialog:
+  - heading "Alta Masiva de Localidades" [level=2]
+  - paragraph: Cargue un archivo CSV con los datos de las localidades que desea crear.
+  - paragraph: Arrastre y suelte su archivo CSV aquí
+  - paragraph: o haga clic para seleccionar un archivo
+  - paragraph:
+    - text: ¿No tiene un archivo CSV?
+    - button "DESCARGAR PLANTILLA"
+  - button "Cancelar"
+  - button "Procesar Archivo" [disabled]
+```

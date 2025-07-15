@@ -1,0 +1,77 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus ADMIN
+- link "Usuarios":
+  - /url: /usuarios
+- link "Configuraciones":
+  - /url: /configuraciones
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido ADMIN
+- button
+- navigation:
+  - link "Usuarios":
+    - /url: /usuarios
+  - link "Configuraciones":
+    - /url: /configuraciones
+  - button "Estadísticas"
+  - link "Usuarios":
+    - /url: /estadisticas/usuarios-por-tipo
+  - link "Compras":
+    - /url: /estadisticas/compras-clientes
+  - link "Logueos":
+    - /url: /estadisticas/logueos-usuarios
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Gestión de Usuarios" [level=1]
+- paragraph: Crear y administrar usuarios del sistema.
+- text: Nombre
+- textbox "Nombre"
+- text: Apellido
+- textbox "Apellido"
+- text: Correo
+- textbox "Correo"
+- text: Documento
+- textbox "Documento"
+- text: Rol
+- combobox "Rol"
+- text: Estado
+- combobox "Estado": TODOS
+- button "Buscar"
+- button "Limpiar"
+- text: Lista de Usuarios
+- button "Alta Masiva"
+- button "Crear Usuario"
+- progressbar
+- paragraph: Cargando usuarios...
+- dialog:
+  - heading "Crear Nuevo Usuario" [level=2]
+  - text: Nombre
+  - textbox "Nombre": Test
+  - text: Apellido
+  - textbox "Apellido": User
+  - text: Correo
+  - textbox "Correo": user53882729@test.com
+  - text: Tipo de Documento
+  - combobox "Tipo de Documento"
+  - text: Documento
+  - textbox "Documento"
+  - text: Fecha de Nacimiento
+  - textbox "Fecha de Nacimiento"
+  - button "Open calendar"
+  - text: Rol
+  - combobox "Rol"
+  - text: Contraseña
+  - textbox "Contraseña"
+  - button "Ocultar o mostrar contraseña"
+  - text: Confirmar Contraseña
+  - textbox "Confirmar Contraseña"
+  - button "Ocultar o mostrar contraseña"
+  - button "Cancelar"
+  - button "Guardar" [disabled]
+```

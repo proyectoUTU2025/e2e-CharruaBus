@@ -1,0 +1,98 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus VENDEDOR
+- link "Ómnibus":
+  - /url: /omnibus
+- link "Localidades":
+  - /url: /localidades
+- link "Viajes":
+  - /url: /viajes
+- link "Comprar":
+  - /url: /comprar
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido VENDEDOR
+- button
+- navigation:
+  - link "Ómnibus":
+    - /url: /omnibus
+  - link "Localidades":
+    - /url: /localidades
+  - link "Viajes":
+    - /url: /viajes
+  - link "Comprar":
+    - /url: /comprar
+  - button "Estadísticas"
+  - link "Viajes por Departamento":
+    - /url: /estadisticas/viajes-departamento
+  - link "Viajes por Ómnibus":
+    - /url: /estadisticas/viajes-por-omnibus
+  - link "Mantenimientos":
+    - /url: /estadisticas/mantenimientos-por-omnibus
+  - link "Pasajes":
+    - /url: /estadisticas/estadisticas-pasajes
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Gestión de Viajes" [level=1]
+- paragraph: Administrar y crear viajes disponibles en el sistema.
+- text: Origen
+- combobox "Origen"
+- text: Destino
+- combobox "Destino"
+- text: Fecha desde
+- textbox "Fecha desde": 15/7/2025
+- button "Open calendar"
+- text: Hora
+- combobox "Hora": Sin especificar (00:00)
+- text: Fecha hasta
+- textbox "Fecha hasta": 31/10/2025
+- button "Open calendar"
+- text: Hora
+- combobox "Hora": Sin especificar (00:00)
+- button "Buscar"
+- button "Limpiar"
+- text: Lista de Viajes
+- button "Crear Viaje"
+- table:
+  - rowgroup:
+    - row "ID Origen Destino Fecha salida Fecha llegada Precio total Disponibles Venta Acciones":
+      - columnheader "ID":
+        - button "ID"
+      - columnheader "Origen"
+      - columnheader "Destino"
+      - columnheader "Fecha salida":
+        - button "Fecha salida"
+      - columnheader "Fecha llegada":
+        - button "Fecha llegada"
+      - columnheader "Precio total":
+        - button "Precio total"
+      - columnheader "Disponibles"
+      - columnheader "Venta":
+        - button "Venta"
+      - columnheader "Acciones"
+  - rowgroup:
+    - row "1 MONTEVIDEO - Terminal Tres Cruces MALDONADO - Punta del Este 7/10/25, 8:00 AM 7/10/25, 12:00 PM UYU100.00 40 Sí":
+      - cell "1"
+      - cell "MONTEVIDEO - Terminal Tres Cruces"
+      - cell "MALDONADO - Punta del Este"
+      - cell "7/10/25, 8:00 AM"
+      - cell "7/10/25, 12:00 PM"
+      - cell "UYU100.00"
+      - cell "40"
+      - cell "Sí"
+      - cell:
+        - button
+- group:
+  - text: Ítems por página
+  - combobox "Ítems por página": "5"
+  - text: 1 – 1 de 1
+  - button "Primera página" [disabled]
+  - button "Página anterior" [disabled]
+  - button "Página siguiente" [disabled]
+  - button "Última página" [disabled]
+```

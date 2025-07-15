@@ -1,0 +1,199 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus ADMIN
+- link "Usuarios":
+  - /url: /usuarios
+- link "Configuraciones":
+  - /url: /configuraciones
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido ADMIN
+- button
+- navigation:
+  - link "Usuarios":
+    - /url: /usuarios
+  - link "Configuraciones":
+    - /url: /configuraciones
+  - button "Estadísticas"
+  - link "Usuarios":
+    - /url: /estadisticas/usuarios-por-tipo
+  - link "Compras":
+    - /url: /estadisticas/compras-clientes
+  - link "Logueos":
+    - /url: /estadisticas/logueos-usuarios
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Gestión de Usuarios" [level=1]
+- paragraph: Crear y administrar usuarios del sistema.
+- text: Nombre
+- textbox "Nombre"
+- text: Apellido
+- textbox "Apellido"
+- text: Correo
+- textbox "Correo"
+- text: Documento
+- textbox "Documento"
+- text: Rol
+- combobox "Rol"
+- text: Estado
+- combobox "Estado": TODOS
+- button "Buscar"
+- button "Limpiar"
+- text: Lista de Usuarios
+- button "Alta Masiva"
+- button "Crear Usuario"
+- table:
+  - rowgroup:
+    - row "ID Nombre Apellido F. Nac. Correo Documento Rol Status Acciones":
+      - columnheader "ID":
+        - button "ID"
+      - columnheader "Nombre":
+        - button "Nombre"
+      - columnheader "Apellido":
+        - button "Apellido"
+      - columnheader "F. Nac.":
+        - button "F. Nac."
+      - columnheader "Correo":
+        - button "Correo"
+      - columnheader "Documento":
+        - button "Documento"
+      - columnheader "Rol":
+        - button "Rol"
+      - columnheader "Status":
+        - button "Status"
+      - columnheader "Acciones"
+  - rowgroup:
+    - row "1 Admin BentancorTest 01/01/1990 admin@test.com 12345678 Admin Activo":
+      - cell "1"
+      - cell "Admin"
+      - cell "BentancorTest"
+      - cell "01/01/1990"
+      - cell "admin@test.com"
+      - cell "12345678"
+      - cell "Admin"
+      - cell "Activo"
+      - cell:
+        - button
+        - button
+    - row "3 Cliente Test 03/03/1992 cliente@test.com 34567890 Cliente Inactivo":
+      - cell "3"
+      - cell "Cliente"
+      - cell "Test"
+      - cell "03/03/1992"
+      - cell "cliente@test.com"
+      - cell "34567890"
+      - cell "Cliente"
+      - cell "Inactivo"
+      - cell:
+        - button
+        - button
+    - row "4 Cliente SinCompras 04/04/1993 cliente2@test.com 45678901 Cliente Inactivo":
+      - cell "4"
+      - cell "Cliente"
+      - cell "SinCompras"
+      - cell "04/04/1993"
+      - cell "cliente2@test.com"
+      - cell "45678901"
+      - cell "Cliente"
+      - cell "Inactivo"
+      - cell:
+        - button
+        - button
+    - row "6 Cliente2 Test 03/03/1992 cliente_extra2@test.com 25614579 Cliente Activo":
+      - cell "6"
+      - cell "Cliente2"
+      - cell "Test"
+      - cell "03/03/1992"
+      - cell "cliente_extra2@test.com"
+      - cell "25614579"
+      - cell "Cliente"
+      - cell "Activo"
+      - cell:
+        - button
+        - button
+    - row "7 Cliente3 Test 03/03/1992 cliente_extra3@test.com 54687133 Cliente Activo":
+      - cell "7"
+      - cell "Cliente3"
+      - cell "Test"
+      - cell "03/03/1992"
+      - cell "cliente_extra3@test.com"
+      - cell "54687133"
+      - cell "Cliente"
+      - cell "Activo"
+      - cell:
+        - button
+        - button
+    - row "8 Pepe Inactivo 12/12/1990 pepe@gmail.com 11112222 Cliente Inactivo":
+      - cell "8"
+      - cell "Pepe"
+      - cell "Inactivo"
+      - cell "12/12/1990"
+      - cell "pepe@gmail.com"
+      - cell "11112222"
+      - cell "Cliente"
+      - cell "Inactivo"
+      - cell:
+        - button
+        - button
+    - row "5 Sin Notifs 01/01/1995 sinnotifs@test.com 44444444 Cliente Activo":
+      - cell "5"
+      - cell "Sin"
+      - cell "Notifs"
+      - cell "01/01/1995"
+      - cell "sinnotifs@test.com"
+      - cell "44444444"
+      - cell "Cliente"
+      - cell "Activo"
+      - cell:
+        - button
+        - button
+    - row "2 Vendedor Test 02/02/1991 vendedor@test.com 23456789 Vendedor Activo":
+      - cell "2"
+      - cell "Vendedor"
+      - cell "Test"
+      - cell "02/02/1991"
+      - cell "vendedor@test.com"
+      - cell "23456789"
+      - cell "Vendedor"
+      - cell "Activo"
+      - cell:
+        - button
+        - button
+    - row "10 asd dd 14/02/2002 2@2.com 44444444 Admin Activo":
+      - cell "10"
+      - cell "asd"
+      - cell "dd"
+      - cell "14/02/2002"
+      - cell "2@2.com"
+      - cell "44444444"
+      - cell "Admin"
+      - cell "Activo"
+      - cell:
+        - button
+        - button
+    - row "11 prob proba 04/02/2002 eee@gmail.com 55550000 Vendedor Activo":
+      - cell "11"
+      - cell "prob"
+      - cell "proba"
+      - cell "04/02/2002"
+      - cell "eee@gmail.com"
+      - cell "55550000"
+      - cell "Vendedor"
+      - cell "Activo"
+      - cell:
+        - button
+        - button
+- group:
+  - text: Ítems por página
+  - combobox "Ítems por página": "10"
+  - text: 1 – 10 de 17
+  - button "Primera página" [disabled]
+  - button "Página anterior" [disabled]
+  - button "Página siguiente"
+  - button "Última página"
+```

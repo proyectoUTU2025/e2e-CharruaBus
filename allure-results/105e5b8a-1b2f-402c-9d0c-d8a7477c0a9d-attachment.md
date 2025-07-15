@@ -1,0 +1,78 @@
+# Page snapshot
+
+```yaml
+- dialog:
+  - heading "Detalles del Ómnibus" [level=2]
+  - paragraph: AAA-1111
+  - button
+  - text: Información General ID 1 Matrícula AAA-1111 Ubicación Actual MALDONADO - Punta del Este Capacidad 2 asientos Estado Activo
+  - button "Registrar Viaje Expreso"
+  - button "Asignar Mantenimiento"
+  - heading "Historial de Movimientos" [level=3]
+  - text: Salida desde
+  - textbox "Salida desde"
+  - button "Open calendar"
+  - text: Hora
+  - combobox "Hora": Cualquiera
+  - text: Hasta
+  - textbox "Hasta"
+  - button "Open calendar"
+  - text: Hora
+  - combobox "Hora": Cualquiera
+  - text: Origen
+  - combobox "Origen": TODOS
+  - text: Destino
+  - combobox "Destino": TODOS
+  - text: Tipo
+  - combobox "Tipo": TODOS
+  - button "Buscar"
+  - button "Limpiar"
+  - table:
+    - rowgroup:
+      - row "ID Salida Llegada Origen Destino Tipo":
+        - columnheader "ID"
+        - columnheader "Salida"
+        - columnheader "Llegada"
+        - columnheader "Origen"
+        - columnheader "Destino"
+        - columnheader "Tipo"
+    - rowgroup:
+      - row "1 01/07/2025 06:00 01/07/2025 06:00 MONTEVIDEO - Terminal Tres Cruces MALDONADO - Punta del Este INICIAL":
+        - cell "1"
+        - cell "01/07/2025 06:00"
+        - cell "01/07/2025 06:00"
+        - cell "MONTEVIDEO - Terminal Tres Cruces"
+        - cell "MALDONADO - Punta del Este"
+        - cell "INICIAL"
+      - row "2 02/08/2025 08:00 02/08/2025 08:00 MONTEVIDEO - Terminal Tres Cruces MALDONADO - Punta del Este MANTENIMIENTO":
+        - cell "2"
+        - cell "02/08/2025 08:00"
+        - cell "02/08/2025 08:00"
+        - cell "MONTEVIDEO - Terminal Tres Cruces"
+        - cell "MALDONADO - Punta del Este"
+        - cell "MANTENIMIENTO"
+  - group:
+    - text: Ítems por página
+    - combobox "Ítems por página": "5"
+    - text: 1 – 2 de 2
+    - button "Primera página" [disabled]
+    - button "Página anterior" [disabled]
+    - button "Página siguiente" [disabled]
+    - button "Última página" [disabled]
+- dialog:
+  - heading "Asignar mantenimiento" [level=2]
+  - text: Motivo
+  - textbox "Motivo"
+  - text: Campo obligatorio Fecha de inicio
+  - textbox "Fecha de inicio": 2/8/2025
+  - button "Open calendar"
+  - text: Hora de inicio
+  - combobox "Hora de inicio"
+  - text: Fecha de fin
+  - textbox "Fecha de fin"
+  - button "Open calendar"
+  - text: Hora de fin
+  - combobox "Hora de fin"
+  - button "Cancelar"
+  - button "Asignar mantenimiento" [disabled]
+```

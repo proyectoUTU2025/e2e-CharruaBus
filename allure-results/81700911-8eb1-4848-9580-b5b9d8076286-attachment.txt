@@ -1,0 +1,17 @@
+Texto dentro del dialog: Alta Masiva de Localidades
+Cargue un archivo CSV con los datos de las localidades que desea crear.
+
+add_circle
+Arrastre y suelte su archivo CSV aquí
+
+o haga clic para seleccionar un archivo
+
+alta_duplicadas.csv
+
+¿No tiene un archivo CSV? download
+DESCARGAR PLANTILLA
+
+
+Cancelar
+
+

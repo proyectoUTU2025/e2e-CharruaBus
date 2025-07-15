@@ -1,0 +1,42 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus CLIENTE
+- link "Comprar":
+  - /url: /comprar
+- link "Mis pasajes":
+  - /url: /pasajes
+- link "Mis compras":
+  - /url: /compras
+- link "Mi Perfil":
+  - /url: /perfil
+- button
+- button "Cerrar sesión"
+- text: Bienvenido CLIENTE
+- button
+- navigation:
+  - link "Comprar":
+    - /url: /comprar
+  - link "Mis pasajes":
+    - /url: /pasajes
+  - link "Mis compras":
+    - /url: /compras
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button
+  - button "Cerrar sesión"
+- text: 1 Búsqueda 2 Seleccionar viaje 3 Asientos 4 Datos del Cliente 5 Resumen Tipo de Viaje
+- combobox "Tipo de Viaje": SOLO IDA
+- text: Origen
+- combobox "Origen"
+- text: Destino
+- combobox "Destino"
+- text: Pasajeros
+- combobox "Pasajeros": "1"
+- text: Fecha Ida
+- textbox "Fecha Ida"
+- button "Open calendar"
+- button "Limpiar"
+- button "Buscar" [disabled]
+```

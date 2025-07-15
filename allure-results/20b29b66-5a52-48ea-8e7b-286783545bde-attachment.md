@@ -1,0 +1,44 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus CLIENTE
+- link "Comprar":
+  - /url: /comprar
+- link "Mis pasajes":
+  - /url: /pasajes
+- link "Mis compras":
+  - /url: /compras
+- link "Mi Perfil":
+  - /url: /perfil
+- button
+- button "Cerrar sesión"
+- text: Bienvenido CLIENTE
+- button
+- navigation:
+  - link "Comprar":
+    - /url: /comprar
+  - link "Mis pasajes":
+    - /url: /pasajes
+  - link "Mis compras":
+    - /url: /compras
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button
+  - button "Cerrar sesión"
+- img "Charrua Bus"
+- heading "¡Hola, Cliente Test!" [level=1]
+- paragraph: Cliente • martes, 15 de julio de 2025, 10:56 a. m.
+- paragraph: Bienvenido de vuelta a Charrua Bus
+- heading "Acciones Rápidas" [level=2]
+- heading "Comprar Pasajes" [level=3]
+- paragraph: Comprar pasajes de ómnibus
+- heading "Mis Pasajes" [level=3]
+- paragraph: Ver historial de pasajes
+- heading "Mis Compras" [level=3]
+- paragraph: Ver historial de compras
+- heading "Mi Perfil" [level=3]
+- paragraph: Ver y editar mi perfil
+- heading "¿Necesitas ayuda?" [level=4]
+- paragraph: Contacta con nosotros en charruabus@gmail.com o al 0800-CHARRUA
+```

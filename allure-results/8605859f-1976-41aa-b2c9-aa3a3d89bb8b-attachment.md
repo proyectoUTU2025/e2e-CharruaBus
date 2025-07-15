@@ -1,0 +1,114 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus VENDEDOR
+- link "Ómnibus":
+  - /url: /omnibus
+- link "Localidades":
+  - /url: /localidades
+- link "Viajes":
+  - /url: /viajes
+- link "Comprar":
+  - /url: /comprar
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido VENDEDOR
+- button
+- navigation:
+  - link "Ómnibus":
+    - /url: /omnibus
+  - link "Localidades":
+    - /url: /localidades
+  - link "Viajes":
+    - /url: /viajes
+  - link "Comprar":
+    - /url: /comprar
+  - button "Estadísticas"
+  - link "Viajes por Departamento":
+    - /url: /estadisticas/viajes-departamento
+  - link "Viajes por Ómnibus":
+    - /url: /estadisticas/viajes-por-omnibus
+  - link "Mantenimientos":
+    - /url: /estadisticas/mantenimientos-por-omnibus
+  - link "Pasajes":
+    - /url: /estadisticas/estadisticas-pasajes
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Gestión de Localidades" [level=1]
+- paragraph: Crear y administrar localidades en el sistema.
+- text: Departamento
+- combobox "Departamento"
+- text: Nombre
+- textbox "Nombre"
+- button "Buscar"
+- button "Limpiar"
+- text: Lista de Localidades
+- button "Alta Masiva"
+- button "Crear Localidad"
+- table:
+  - rowgroup:
+    - row "ID Departamento Nombre":
+      - columnheader "ID":
+        - button "ID"
+      - columnheader "Departamento":
+        - button "Departamento"
+      - columnheader "Nombre":
+        - button "Nombre"
+  - rowgroup:
+    - row "5 ARTIGAS Artigas":
+      - cell "5"
+      - cell "ARTIGAS"
+      - cell "Artigas"
+    - row "1 MONTEVIDEO Montevideo":
+      - cell "1"
+      - cell "MONTEVIDEO"
+      - cell "Montevideo"
+    - row "7 PAYSANDU Paysandú":
+      - cell "7"
+      - cell "PAYSANDU"
+      - cell "Paysandú"
+    - row "2 MALDONADO Punta del Este":
+      - cell "2"
+      - cell "MALDONADO"
+      - cell "Punta del Este"
+    - row "3 ROCHA Rocha":
+      - cell "3"
+      - cell "ROCHA"
+      - cell "Rocha"
+    - row "6 SORIANO Soriano":
+      - cell "6"
+      - cell "SORIANO"
+      - cell "Soriano"
+    - row "4 TREINTA Y TRES Treinta y Tres":
+      - cell "4"
+      - cell "TREINTA Y TRES"
+      - cell "Treinta y Tres"
+- group:
+  - text: Ítems por página
+  - combobox "Ítems por página": "10"
+  - text: 1 – 7 de 7
+  - button "Primera página" [disabled]
+  - button "Página anterior" [disabled]
+  - button "Página siguiente" [disabled]
+  - button "Última página" [disabled]
+- dialog:
+  - heading "Resultado de la Carga Masiva" [level=2]
+  - heading "Proceso Finalizado" [level=3]
+  - paragraph:
+    - text: Se procesaron
+    - strong: "7"
+    - text: registros en total.
+  - paragraph:
+    - strong: "0"
+    - text: localidades fueron creadas exitosamente.
+  - paragraph:
+    - strong: "7"
+    - text: registros tuvieron errores.
+  - paragraph: Descargue el archivo CSV para ver el detalle completo de cada registro.
+  - button "Descargar Detalle CSV"
+  - button "Cerrar"
+```

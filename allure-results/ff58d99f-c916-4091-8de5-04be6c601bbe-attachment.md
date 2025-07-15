@@ -1,0 +1,83 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus CLIENTE
+- link "Comprar":
+  - /url: /comprar
+- link "Mis pasajes":
+  - /url: /pasajes
+- link "Mis compras":
+  - /url: /compras
+- link "Mi Perfil":
+  - /url: /perfil
+- button
+- button "Cerrar sesión"
+- text: Bienvenido CLIENTE
+- button
+- navigation:
+  - link "Comprar":
+    - /url: /comprar
+  - link "Mis pasajes":
+    - /url: /pasajes
+  - link "Mis compras":
+    - /url: /compras
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button
+  - button "Cerrar sesión"
+- heading "Historial de Pasajes" [level=1]
+- paragraph: Revisa el estado de tus viajes y descarga tus pasaje.
+- text: Fecha Desde
+- textbox "Fecha Desde"
+- button "Open calendar"
+- text: Fecha Hasta
+- textbox "Fecha Hasta"
+- button "Open calendar"
+- text: Origen
+- combobox "Origen"
+- text: Destino
+- combobox "Destino"
+- text: Estado
+- combobox "Estado": TODOS
+- button "Buscar"
+- button "Limpiar"
+- heading "Mis Pasajes" [level=2]
+- table:
+  - rowgroup:
+    - row "Fecha Salida Asiento Origen Destino Estado Precio Acciones":
+      - columnheader "Fecha Salida"
+      - columnheader "Asiento"
+      - columnheader "Origen"
+      - columnheader "Destino"
+      - columnheader "Estado"
+      - columnheader "Precio"
+      - columnheader "Acciones"
+  - rowgroup:
+    - row "10/07/2025 08:00 1 MONTEVIDEO - Terminal Tres Cruces MALDONADO - Punta del Este Cancelado UYU100.00":
+      - cell "10/07/2025 08:00"
+      - cell "1"
+      - cell "MONTEVIDEO - Terminal Tres Cruces"
+      - cell "MALDONADO - Punta del Este"
+      - cell "Cancelado"
+      - cell "UYU100.00"
+      - cell:
+        - button
+    - row "10/07/2025 08:00 1 MONTEVIDEO - Terminal Tres Cruces MALDONADO - Punta del Este Pendiente UYU100.00":
+      - cell "10/07/2025 08:00"
+      - cell "1"
+      - cell "MONTEVIDEO - Terminal Tres Cruces"
+      - cell "MALDONADO - Punta del Este"
+      - cell "Pendiente"
+      - cell "UYU100.00"
+      - cell:
+        - button
+- group:
+  - text: Ítems por página
+  - combobox "Ítems por página": "10"
+  - text: 1 – 2 de 2
+  - button "Primera página" [disabled]
+  - button "Página anterior" [disabled]
+  - button "Página siguiente" [disabled]
+  - button "Última página" [disabled]
+```

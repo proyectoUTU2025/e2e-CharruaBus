@@ -1,0 +1,61 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus ADMIN
+- link "Usuarios":
+  - /url: /usuarios
+- link "Configuraciones":
+  - /url: /configuraciones
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido ADMIN
+- button
+- navigation:
+  - link "Usuarios":
+    - /url: /usuarios
+  - link "Configuraciones":
+    - /url: /configuraciones
+  - button "Estadísticas"
+  - link "Usuarios":
+    - /url: /estadisticas/usuarios-por-tipo
+  - link "Compras":
+    - /url: /estadisticas/compras-clientes
+  - link "Logueos":
+    - /url: /estadisticas/logueos-usuarios
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Mi Perfil" [level=1]
+- paragraph: Administrá tu información personal y configuración de cuenta.
+- text: Información Personal Actualizá tus datos personales y de contacto. Activo Nombre
+- textbox "Nombre": Admin
+- text: Apellido
+- textbox "Apellido": Test
+- text: Email
+- textbox "Email" [disabled]: admin@test.com
+- text: Tipo de Documento
+- combobox "Tipo de Documento": CEDULA
+- text: Documento
+- textbox "Documento": "12345678"
+- text: Fecha de Nacimiento
+- textbox "Fecha de Nacimiento": 1/1/1990
+- button "Open calendar"
+- text: Rol
+- textbox "Rol" [disabled]: ADMIN
+- button "Cancelar"
+- button "Guardar" [disabled]
+- text: Cambiar Contraseña Actualizá tu contraseña actual. Contraseña Actual
+- textbox "Contraseña Actual"
+- button
+- text: Nueva Contraseña
+- textbox "Nueva Contraseña"
+- button
+- text: 8 o más caracteres Una letra mayúscula Una letra minúscula Un número Un caracter especial (!@#$...) Confirmar Nueva Contraseña
+- textbox "Confirmar Nueva Contraseña"
+- button
+- button "Cancelar"
+- button "Cambiar Contraseña" [disabled]
+```

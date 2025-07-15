@@ -1,0 +1,25 @@
+
+=== CONTENIDO DEL DIALOG ===
+ Resultado de la Carga Masiva
+Proceso Finalizado
+
+folder_open
+Se procesaron
+7
+registros en total.
+
+check_circle_outline
+0
+localidades fueron creadas exitosamente.
+
+highlight_off
+7
+registros tuvieron errores.
+
+Descargue el archivo CSV para ver el detalle completo de cada registro.
+
+download
+Descargar Detalle CSV
+Cerrar 
+============================
+

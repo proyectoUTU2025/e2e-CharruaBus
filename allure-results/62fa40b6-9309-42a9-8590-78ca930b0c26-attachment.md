@@ -1,0 +1,48 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus ADMIN
+- link "Usuarios":
+  - /url: /usuarios
+- link "Configuraciones":
+  - /url: /configuraciones
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido ADMIN
+- button
+- navigation:
+  - link "Usuarios":
+    - /url: /usuarios
+  - link "Configuraciones":
+    - /url: /configuraciones
+  - button "Estadísticas"
+  - link "Usuarios":
+    - /url: /estadisticas/usuarios-por-tipo
+  - link "Compras":
+    - /url: /estadisticas/compras-clientes
+  - link "Logueos":
+    - /url: /estadisticas/logueos-usuarios
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- img "Charrua Bus"
+- heading "¡Hola, Admin BentancorTest!" [level=1]
+- paragraph: Administrador • domingo, 13 de julio de 2025, 04:18 p. m.
+- paragraph: Bienvenido de vuelta a Charrua Bus
+- heading "Acciones Rápidas" [level=2]
+- heading "Gestionar Usuarios" [level=3]
+- paragraph: Administrar usuarios del sistema
+- heading "Configuraciones" [level=3]
+- paragraph: Configurar parámetros del sistema
+- heading "Mi Perfil" [level=3]
+- paragraph: Ver y editar mi perfil
+- heading "Estadísticas de Usuarios" [level=3]
+- paragraph: Ver estadísticas de los usuarios del sistema
+- heading "Estadísticas de Compras" [level=3]
+- paragraph: Ver estadísticas de las compras de los clientes
+- heading "Estadísticas de Logueos" [level=3]
+- paragraph: Ver estadísticas de los ingresos de usuarios al sistema
+```

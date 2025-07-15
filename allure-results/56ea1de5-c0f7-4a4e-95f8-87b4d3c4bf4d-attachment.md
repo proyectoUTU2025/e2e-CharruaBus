@@ -1,0 +1,82 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus VENDEDOR
+- link "Ómnibus":
+  - /url: /omnibus
+- link "Localidades":
+  - /url: /localidades
+- link "Viajes":
+  - /url: /viajes
+- link "Comprar":
+  - /url: /comprar
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido VENDEDOR
+- button
+- navigation:
+  - link "Ómnibus":
+    - /url: /omnibus
+  - link "Localidades":
+    - /url: /localidades
+  - link "Viajes":
+    - /url: /viajes
+  - link "Comprar":
+    - /url: /comprar
+  - button "Estadísticas"
+  - link "Viajes por Departamento":
+    - /url: /estadisticas/viajes-departamento
+  - link "Viajes por Ómnibus":
+    - /url: /estadisticas/viajes-por-omnibus
+  - link "Mantenimientos":
+    - /url: /estadisticas/mantenimientos-por-omnibus
+  - link "Pasajes":
+    - /url: /estadisticas/estadisticas-pasajes
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Gestión de Localidades" [level=1]
+- paragraph: Crear y administrar localidades en el sistema.
+- text: Departamento
+- combobox "Departamento": ARTIGAS
+- text: Nombre
+- textbox "Nombre": XYZsinMatch
+- button "Buscar"
+- button "Limpiar"
+- text: Lista de Localidades
+- button "Alta Masiva"
+- button "Crear Localidad"
+- table:
+  - rowgroup:
+    - row "ID Departamento Nombre":
+      - columnheader "ID":
+        - button "ID"
+      - columnheader "Departamento":
+        - button "Departamento"
+      - columnheader "Nombre":
+        - button "Nombre"
+  - rowgroup:
+    - row "3 COLONIA Colonia del Sacramento":
+      - cell "3"
+      - cell "COLONIA"
+      - cell "Colonia del Sacramento"
+    - row "2 MALDONADO Punta del Este":
+      - cell "2"
+      - cell "MALDONADO"
+      - cell "Punta del Este"
+    - row "1 MONTEVIDEO Terminal Tres Cruces":
+      - cell "1"
+      - cell "MONTEVIDEO"
+      - cell "Terminal Tres Cruces"
+- group:
+  - text: Ítems por página
+  - combobox "Ítems por página": "10"
+  - text: 1 – 3 de 3
+  - button "Primera página" [disabled]
+  - button "Página anterior" [disabled]
+  - button "Página siguiente" [disabled]
+  - button "Última página" [disabled]
+```

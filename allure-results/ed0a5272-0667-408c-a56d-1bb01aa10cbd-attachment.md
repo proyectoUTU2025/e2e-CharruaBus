@@ -1,0 +1,146 @@
+# Page snapshot
+
+```yaml
+- img "Logo"
+- text: CharruaBus ADMIN
+- link "Usuarios":
+  - /url: /usuarios
+- link "Configuraciones":
+  - /url: /configuraciones
+- button "Estadísticas"
+- link "Mi Perfil":
+  - /url: /perfil
+- button "Cerrar sesión"
+- text: Bienvenido ADMIN
+- button
+- navigation:
+  - link "Usuarios":
+    - /url: /usuarios
+  - link "Configuraciones":
+    - /url: /configuraciones
+  - button "Estadísticas"
+  - link "Usuarios":
+    - /url: /estadisticas/usuarios-por-tipo
+  - link "Compras":
+    - /url: /estadisticas/compras-clientes
+  - link "Logueos":
+    - /url: /estadisticas/logueos-usuarios
+  - link "Mi Perfil":
+    - /url: /perfil
+  - button "Cerrar sesión"
+- heading "Mi Perfil" [level=1]
+- paragraph: Administrá tu información personal y configuración de cuenta.
+- text: Información Personal Actualizá tus datos personales y de contacto. Activo Nombre
+- textbox "Nombre": Admin
+- text: Apellido
+- textbox "Apellido": BentancorTest
+- text: Email
+- textbox "Email" [disabled]: admin@test.com
+- text: Tipo de Documento
+- combobox "Tipo de Documento": CEDULA
+- text: Documento
+- textbox "Documento": "12345678"
+- text: Fecha de Nacimiento
+- textbox "Fecha de Nacimiento":
+  - text: 1/1/1990
+  - button "Choose month and year"
+  - button "Previous month"
+  - button "Next month"
+  - grid:
+    - rowgroup:
+      - row "domingo lunes martes miércoles jueves viernes sábado":
+        - columnheader "domingo"
+        - columnheader "lunes"
+        - columnheader "martes"
+        - columnheader "miércoles"
+        - columnheader "jueves"
+        - columnheader "viernes"
+        - columnheader "sábado"
+    - rowgroup:
+      - row "1 de enero de 1990 2 de enero de 1990 3 de enero de 1990 4 de enero de 1990 5 de enero de 1990 6 de enero de 1990":
+        - gridcell
+        - gridcell "1 de enero de 1990":
+          - button "1 de enero de 1990" [pressed]: "1"
+        - gridcell "2 de enero de 1990":
+          - button "2 de enero de 1990": "2"
+        - gridcell "3 de enero de 1990":
+          - button "3 de enero de 1990": "3"
+        - gridcell "4 de enero de 1990":
+          - button "4 de enero de 1990": "4"
+        - gridcell "5 de enero de 1990":
+          - button "5 de enero de 1990": "5"
+        - gridcell "6 de enero de 1990":
+          - button "6 de enero de 1990": "6"
+      - row "7 de enero de 1990 8 de enero de 1990 9 de enero de 1990 10 de enero de 1990 11 de enero de 1990 12 de enero de 1990 13 de enero de 1990":
+        - gridcell "7 de enero de 1990":
+          - button "7 de enero de 1990": "7"
+        - gridcell "8 de enero de 1990":
+          - button "8 de enero de 1990": "8"
+        - gridcell "9 de enero de 1990":
+          - button "9 de enero de 1990": "9"
+        - gridcell "10 de enero de 1990":
+          - button "10 de enero de 1990": "10"
+        - gridcell "11 de enero de 1990":
+          - button "11 de enero de 1990": "11"
+        - gridcell "12 de enero de 1990":
+          - button "12 de enero de 1990": "12"
+        - gridcell "13 de enero de 1990":
+          - button "13 de enero de 1990": "13"
+      - row "14 de enero de 1990 15 de enero de 1990 16 de enero de 1990 17 de enero de 1990 18 de enero de 1990 19 de enero de 1990 20 de enero de 1990":
+        - gridcell "14 de enero de 1990":
+          - button "14 de enero de 1990": "14"
+        - gridcell "15 de enero de 1990":
+          - button "15 de enero de 1990": "15"
+        - gridcell "16 de enero de 1990":
+          - button "16 de enero de 1990": "16"
+        - gridcell "17 de enero de 1990":
+          - button "17 de enero de 1990": "17"
+        - gridcell "18 de enero de 1990":
+          - button "18 de enero de 1990": "18"
+        - gridcell "19 de enero de 1990":
+          - button "19 de enero de 1990": "19"
+        - gridcell "20 de enero de 1990":
+          - button "20 de enero de 1990": "20"
+      - row "21 de enero de 1990 22 de enero de 1990 23 de enero de 1990 24 de enero de 1990 25 de enero de 1990 26 de enero de 1990 27 de enero de 1990":
+        - gridcell "21 de enero de 1990":
+          - button "21 de enero de 1990": "21"
+        - gridcell "22 de enero de 1990":
+          - button "22 de enero de 1990": "22"
+        - gridcell "23 de enero de 1990":
+          - button "23 de enero de 1990": "23"
+        - gridcell "24 de enero de 1990":
+          - button "24 de enero de 1990": "24"
+        - gridcell "25 de enero de 1990":
+          - button "25 de enero de 1990": "25"
+        - gridcell "26 de enero de 1990":
+          - button "26 de enero de 1990": "26"
+        - gridcell "27 de enero de 1990":
+          - button "27 de enero de 1990": "27"
+      - row "28 de enero de 1990 29 de enero de 1990 30 de enero de 1990 31 de enero de 1990":
+        - gridcell "28 de enero de 1990":
+          - button "28 de enero de 1990": "28"
+        - gridcell "29 de enero de 1990":
+          - button "29 de enero de 1990": "29"
+        - gridcell "30 de enero de 1990":
+          - button "30 de enero de 1990": "30"
+        - gridcell "31 de enero de 1990":
+          - button "31 de enero de 1990": "31"
+- button "Open calendar" [expanded]
+- text: Rol
+- textbox "Rol" [disabled]: ADMIN
+- button "Cancelar"
+- button "Guardar" [disabled]
+- text: Cambiar Contraseña Actualizá tu contraseña actual. Contraseña Actual
+- textbox "Contraseña Actual"
+- button
+- text: Nueva Contraseña
+- textbox "Nueva Contraseña"
+- button
+- text: 8 o más caracteres Una letra mayúscula Una letra minúscula Un número Un caracter especial (!@#$...) Confirmar Nueva Contraseña
+- textbox "Confirmar Nueva Contraseña"
+- button
+- button "Cancelar"
+- button "Cambiar Contraseña" [disabled]
+- dialog "Fecha de Nacimiento":
+  - button "Close calendar"
+```
