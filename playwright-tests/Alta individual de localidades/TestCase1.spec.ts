@@ -11,9 +11,9 @@ test('Test Case 1: Alta exitosa de una nueva localidad', async ({ page }) => {
 
   //4.Iniciar sesión como vendedor
   await page.getByText('Email').click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Seleccionar "Localidades" desde la barra de navegación

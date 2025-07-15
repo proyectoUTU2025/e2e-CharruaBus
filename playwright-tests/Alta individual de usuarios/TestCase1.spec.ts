@@ -30,8 +30,8 @@ test("Test Case 1: Alta exitosa de nuevo usuario", async ({ page }) => {
   await expect(page.getByRole("textbox", { name: "Email" })).toBeVisible()
 
   //5.Iniciar sesión como administrador
-  await page.getByRole("textbox", { name: "Email" }).fill("admin@admin.com")
-  await page.getByLabel("Contraseña", { exact: true }).fill("admin")
+  await page.getByRole("textbox", { name: "Email" }).fill("admin@test.com")
+  await page.getByLabel("Contraseña", { exact: true }).fill("Admin123!$")
   await page.getByRole("button", { name: "Iniciar sesión" }).click()
   await page.waitForURL("**/home")
   await page.waitForLoadState("networkidle")

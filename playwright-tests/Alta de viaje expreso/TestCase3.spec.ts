@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 
 test("Test Case 3: Inconsistencia en la localidad de origen del ómnibus", async ({ page }) => {
 
-  const expectedDestination = `	SALTO - Salto`  
+  const expectedDestination = `MALDONADO - Punta del Este`  
   //1.Lanzar el navegador
   //2.Navegar a la URL de la aplicación
   await page.goto("http://localhost:4200/")
@@ -15,8 +15,8 @@ test("Test Case 3: Inconsistencia en la localidad de origen del ómnibus", async
   await expect(page.getByRole("textbox", { name: "Email" })).toBeVisible() // Asegurar que el campo de email es visible
 
   //4.Iniciar sesión como vendedor
-  await page.getByRole("textbox", { name: "Email" }).fill("usuario1@gmail.com")
-  await page.getByLabel("Contraseña", { exact: true }).fill("Vendedor12!")
+  await page.getByRole("textbox", { name: "Email" }).fill("vendedor@test.com")
+  await page.getByLabel("Contraseña", { exact: true }).fill("Vend123!$")
   await page.getByRole("button", { name: "Iniciar sesión" }).click()
   await page.waitForURL("**/home") // Esperar a que la navegación a home se complete
   await page.waitForLoadState("networkidle") // Esperar a que la red esté inactiva
@@ -28,7 +28,7 @@ test("Test Case 3: Inconsistencia en la localidad de origen del ómnibus", async
 
   //6.Seleccionar la opción "detalle" en las acciones de un ómnibus de la lista
   await page
-    .getByRole("row", { name: /BRO1312/ })
+    .getByRole("row", { name: /AAA-1111/ })
     .getByRole("button")
     .first()
     .click()
@@ -58,7 +58,7 @@ test("Test Case 3: Inconsistencia en la localidad de origen del ómnibus", async
     .filter({ hasText: "Fecha de salida" })
     .getByLabel("Open calendar")
     .click()
-  await page.getByRole("button", { name: `14 de julio de ${currentYear}` }).click()
+  await page.getByRole("button", { name: `15 de julio de ${currentYear}` }).click()
 
   // Esperar a que el backdrop del datepicker desaparezca antes de interactuar con el siguiente campo
   await expect(page.locator(".mat-datepicker-4-backdrop")).not.toBeVisible({ timeout: 10000 })
@@ -76,7 +76,7 @@ test("Test Case 3: Inconsistencia en la localidad de origen del ómnibus", async
     .filter({ hasText: "Fecha de llegada" })
     .getByLabel("Open calendar")
     .click()
-  await page.getByRole("button", { name: `14 de julio de ${currentYear}` }).click()
+  await page.getByRole("button", { name: `16 de julio de ${currentYear}` }).click()
 
 
   // Esperar a que el backdrop del datepicker desaparezca después de la segunda fecha también

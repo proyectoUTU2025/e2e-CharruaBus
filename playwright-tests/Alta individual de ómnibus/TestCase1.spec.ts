@@ -12,8 +12,8 @@ test('Test Case 1: Alta exitosa de un nuevo ómnibus', async ({ page }) => {
   await expect(page.getByRole('textbox', { name: 'Email' })).toBeVisible(); 
 
   //3. Iniciar sesión como vendedor
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
-  await page.getByLabel('Contraseña', { exact: true }).fill('Vendedor12!'); 
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
+  await page.getByLabel('Contraseña', { exact: true }).fill('Vend123!$'); 
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
   await page.waitForURL('**/home'); // Esperar a que la URL sea la de home después del login
   await page.waitForLoadState('networkidle'); // Esperar a que la red esté inactiva después del login
@@ -35,8 +35,8 @@ test('Test Case 1: Alta exitosa de un nuevo ómnibus', async ({ page }) => {
   await agregarOmnibusModal.getByRole('textbox', { name: 'Matrícula' }).fill(matriculaUnica);
 
   await agregarOmnibusModal.getByRole('combobox', { name: 'Ubicación' }).click();
-  await page.getByRole('option', { name: 'DURAZNO - Durazno' }).waitFor({ state: 'visible', timeout: 5000 });
-  await page.getByRole('option', { name: 'DURAZNO - Durazno' }).click();
+  await page.getByRole('option', { name: 'MALDONADO - Punta del Este' }).waitFor({ state: 'visible', timeout: 5000 });
+  await page.getByRole('option', { name: 'MALDONADO - Punta del Este' }).click();
 
   await agregarOmnibusModal.getByRole('spinbutton', { name: 'Cantidad de Asientos' }).fill('60');
 

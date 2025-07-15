@@ -11,17 +11,16 @@ test('Test Case 3: Ómnibus sin viajes asignados', async ({ page }) => {
 
   //4.Iniciar sesión como vendedor
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Acceder al módulo de gestión de ómnibus
   await page.locator('mat-toolbar').getByRole('link', { name: 'Ómnibus' }).click();
 
   //6.Seleccionar el detalle del ómnibus que no tiene viajes asignados
-  await page.getByRole('button', { name: 'Página siguiente' }).click();
-  await page.getByRole('row', { name: '8 TEST062480 60 DURAZNO -' }).getByRole('button').first().click();
+  await page.getByRole('row', { name: '6 TEST622527 60 MALDONADO -' }).getByRole('button').first().click();
   const historialMovimientosModal = page.locator('mat-dialog-container', { hasText: 'Historial de Movimientos' });
   await expect(historialMovimientosModal).toBeVisible({ timeout: 10000 }); 
 

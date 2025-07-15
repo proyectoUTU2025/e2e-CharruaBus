@@ -18,7 +18,7 @@ test('Test Case 3: Token expirado o inválido', async ({ page }) => {
 
   //6.Ingresar un correo registrado
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente_extra3@test.com');
  
   //7.Pulsar “Enviar código”
   await page.getByRole('button', { name: 'Enviar código' }).click();
@@ -36,5 +36,5 @@ test('Test Case 3: Token expirado o inválido', async ({ page }) => {
   await page.getByRole('button', { name: 'Verificar Código' }).click();
 
   //11.Verificar que se muestre un mensaje de error
-  await expect(page.getByText('Código inválido o expirado.')).toBeVisible();
+  await expect(page.getByText('Código inválido.')).toBeVisible();
 });

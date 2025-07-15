@@ -11,9 +11,9 @@ test('Test Case 1: Generación exitosa de estadísticas de viajes con visualizac
 
   //4.Iniciar sesión como vendedor
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByRole('textbox', { name: 'Contraseña' }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
   await page.waitForLoadState('networkidle'); // Esperar a que la página cargue
 
@@ -22,12 +22,12 @@ test('Test Case 1: Generación exitosa de estadísticas de viajes con visualizac
   await page.waitForLoadState('networkidle'); // Esperar a que la sección cargue
 
   //6.Seleccionar la opción "Viajes por Ómnibus"
-  await page.getByRole('menuitem', { name: 'Viajes por Ómnibus' }).click();
+  await page.getByRole('menuitem', { name: 'Pasajes' }).click();
   await page.waitForLoadState('networkidle'); // Esperar a que la subsección cargue
 
   //7.Seleccionar la opción "Descargar CSV"
   const downloadPromise = page.waitForEvent('download');
-  await page.getByRole('button', { name: 'CSV' }).click();
+  await page.getByRole('button', { name: 'Resumen CSV' }).click();
   const download = await downloadPromise;
 
   //8.Verificar que el sistema genera y descarga el archivo CSV

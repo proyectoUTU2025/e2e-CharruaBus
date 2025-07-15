@@ -11,9 +11,9 @@ test('Test Case 2: Intentar registrar una localidad ya existente', async ({ page
 
   //4.Iniciar sesión como vendedor
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Seleccionar "Localidades" desde la barra de navegación
@@ -26,10 +26,10 @@ test('Test Case 2: Intentar registrar una localidad ya existente', async ({ page
   await expect(crearLocalidadModal).toBeVisible(); // Asegurarse de que el modal es visible
 
   //7.Completar los campos "Departamento" y "Nombre de localidad" con una combinación que ya existe en el sistema
-  await crearLocalidadModal.getByRole('textbox', { name: 'Nombre' }).fill('Durazno');
+  await crearLocalidadModal.getByRole('textbox', { name: 'Nombre' }).fill('Terminal Tres Cruces');
   
   await crearLocalidadModal.getByRole('combobox', { name: 'Departamento' }).click();
-  await page.getByRole('option', { name: 'DURAZNO' }).click(); // La opción se busca globalmente, no necesita el prefijo del modal.
+  await page.getByRole('option', { name: 'MONTEVIDEO' }).click(); // La opción se busca globalmente, no necesita el prefijo del modal.
 
   //8.Pulsar "Guardar"
   await crearLocalidadModal.getByRole('button', { name: 'Guardar' }).click();

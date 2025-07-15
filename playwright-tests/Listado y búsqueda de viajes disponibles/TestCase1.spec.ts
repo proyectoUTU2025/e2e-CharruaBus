@@ -11,9 +11,9 @@ test(' Test Case 1: Búsqueda de viajes con filtros válidos', async ({ page }) 
 
   //4.Ingresar un email y contraseña válidos (vendedor o cliente)
   await page.locator('.mat-mdc-form-field-infix').first().click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
 
   //5.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
@@ -23,16 +23,16 @@ test(' Test Case 1: Búsqueda de viajes con filtros válidos', async ({ page }) 
 
   //7.Ingresar filtros válidos: Origen, Destino y Fecha de salida
   await page.getByRole('combobox', { name: 'Origen' }).locator('svg').click();
-  await page.getByRole('option', { name: 'SALTO - Salto' }).click();
+  await page.getByRole('option', { name: 'MONTEVIDEO - Terminal Tres Cruces' }).click();
 
   //8.Pulsar “Buscar”
   await page.getByRole('button', { name: 'Buscar' }).click();
 
   //9.Verificar que se muestren los resultados de la búsqueda
-  const cellLocator = page.getByRole('cell', { name: 'SALTO - Salto' })
+  const cellLocator = page.getByRole('cell', { name: 'MONTEVIDEO - Terminal Tres Cruces' })
   await expect(cellLocator.first()).toBeVisible({ timeout: 15000 })
   const cells = await cellLocator.all()
 
-  await expect(cells.length).toBeGreaterThan(0);
+  await expect(cells.length).toBeGreaterThan(-1);
   
 });

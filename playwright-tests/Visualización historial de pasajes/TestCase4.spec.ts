@@ -11,9 +11,9 @@ test('Test Case 4: No hay pasajes que coincidan con los filtros aplicados', asyn
 
   //4.Iniciar sesión como cliente
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente_extra2@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Cli123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Seleccionar la opción "Mis pasajes" en la interfaz
@@ -21,7 +21,7 @@ test('Test Case 4: No hay pasajes que coincidan con los filtros aplicados', asyn
 
   //6.Aplicar filtros que se sabe que no arrojarán ningún resultado 
   await page.getByRole('combobox', { name: 'Origen' }).locator('svg').click();
-  await page.getByText('ARTIGAS - San Carlos').click();
+  await page.getByText('MALDONADO - Punta del Este').click();
 
   //7.Presionar "Buscar"
   await page.getByRole('button', { name: 'Buscar' }).click();

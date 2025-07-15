@@ -11,9 +11,9 @@ test('Test Case 1: Visualización y descarga exitosa de estadísticas', async ({
  
   //4.Iniciar sesión como administrador
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('admin@admin.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('admin@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('admin');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Admin123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Acceder a la sección “Estadísticas”
