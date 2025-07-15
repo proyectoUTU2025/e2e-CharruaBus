@@ -8,19 +8,19 @@ test('Test Case 2: Datos incompletos o inválidos', async ({ page }) => {
 
   //3.Ir a la página de login
   await page.getByRole('link', { name: 'Login' }).click();
- 
+
   //4.Iniciar sesión como administrador
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('admin@admin.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('admin@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('admin');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Admin123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Acceder al menú “Configuraciones”
   await page.locator('mat-toolbar').getByRole('link', { name: 'Configuraciones' }).click();
 
   //6.Seleccionar una configuración a modificar
-  await page.getByRole('row', { name: 'horas_penalizacion 24 -' }).getByRole('button').click();
+  await page.getByRole('row', { name: 'max_pasajes_por_compra 10 -' }).getByRole('button').click();
 
   //7.Dejar el campo vacío o ingresar un valor fuera de rango permitido
   await page.getByRole('spinbutton', { name: 'Valor Entero' }).fill('');
