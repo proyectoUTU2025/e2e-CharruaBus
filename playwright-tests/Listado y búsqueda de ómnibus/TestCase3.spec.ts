@@ -11,9 +11,9 @@ test('Test Case 3: No hay coincidencias con los filtros aplicados', async ({ pag
  
   //4.Iniciar sesión como vendedor
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Acceder al módulo de ómnibus
@@ -21,13 +21,13 @@ test('Test Case 3: No hay coincidencias con los filtros aplicados', async ({ pag
 
   //6.Aplicar un conjunto de filtros que, se sabe, no arrojarán ningún resultado
   await page.getByRole('combobox', { name: 'Ubicación del Ómnibus' }).locator('svg').click();
-  await page.getByRole('option', { name: 'ARTIGAS - San Carlos', exact: true }).click();
+  await page.getByRole('option', { name: 'MALDONADO - Punta del Este', exact: true }).click();
   await page.getByText('Max. Asientos').click();
   await page.getByRole('spinbutton', { name: 'Max. Asientos' }).fill('1');
   await page.locator('mat-form-field').filter({ hasText: 'Fecha SalidaRequerida si' }).getByLabel('Open calendar').click();
-  await page.getByRole('button', { name: '10 de julio de' }).click();
+  await page.getByRole('button', { name: '17 de julio de' }).click();
   await page.locator('mat-form-field').filter({ hasText: 'Fecha LlegadaRequerida si' }).getByLabel('Open calendar').click();
-  await page.getByRole('button', { name: '11 de julio de' }).click();
+  await page.getByRole('button', { name: '18 de julio de' }).click();
 
   //7.Pulsar "Buscar"
   await page.getByRole('button', { name: 'Buscar' }).click();

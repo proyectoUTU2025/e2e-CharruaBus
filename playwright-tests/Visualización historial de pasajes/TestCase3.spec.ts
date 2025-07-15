@@ -11,9 +11,9 @@ test('Test Case 3: Cliente sin pasajes comprados (sin compras registradas)', asy
 
   //4.Iniciar sesión como cliente
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente_extra2@test.com');
   await page.locator('#mat-mdc-form-field-label-1 span').click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Cli123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Seleccionar la opción "Mis pasajes" en la interfaz

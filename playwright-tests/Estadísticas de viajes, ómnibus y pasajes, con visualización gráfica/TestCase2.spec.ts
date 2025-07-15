@@ -11,9 +11,9 @@ test('Test Case 2: No hay datos disponibles para la estadística solicitada', as
 
   //4.Iniciar sesión como vendedor
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Presionar la sección de "Estadísticas"

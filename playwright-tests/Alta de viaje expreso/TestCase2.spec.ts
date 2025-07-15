@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 
 test("Test Case 2: Ómnibus con mantenimiento o viaje asignado en las fechas seleccionadas", async ({ page }) => {
 
-  const expectedDestination = `FLORIDA - Merin`  
+  const expectedDestination = `MONTEVIDEO - Terminal Tres Cruces`  
   //1.Lanzar el navegador
   //2.Navegar a la URL de la aplicación
   await page.goto("http://localhost:4200/")
@@ -15,8 +15,8 @@ test("Test Case 2: Ómnibus con mantenimiento o viaje asignado en las fechas sel
   await expect(page.getByRole("textbox", { name: "Email" })).toBeVisible() // Asegurar que el campo de email es visible
 
   //4.Iniciar sesión como vendedor
-  await page.getByRole("textbox", { name: "Email" }).fill("usuario1@gmail.com")
-  await page.getByLabel("Contraseña", { exact: true }).fill("Vendedor12!")
+  await page.getByRole("textbox", { name: "Email" }).fill("vendedor@test.com")
+  await page.getByLabel("Contraseña", { exact: true }).fill("Vend123!$")
   await page.getByRole("button", { name: "Iniciar sesión" }).click()
   await page.waitForURL("**/home") // Esperar a que la navegación a home se complete
   await page.waitForLoadState("networkidle") // Esperar a que la red esté inactiva
@@ -28,7 +28,7 @@ test("Test Case 2: Ómnibus con mantenimiento o viaje asignado en las fechas sel
 
   //6.Seleccionar la opción "detalle" en las acciones de un ómnibus de la lista
   await page
-    .getByRole("row", { name: /BRO1312/ })
+    .getByRole("row", { name: /AAA-1111/ })
     .getByRole("button")
     .first()
     .click()

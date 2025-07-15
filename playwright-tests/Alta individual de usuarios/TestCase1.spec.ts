@@ -11,22 +11,26 @@ function calculateCedulaVerifier(sevenDigits: string): string {
   return (remainder === 0 ? 0 : 10 - remainder).toString();
 }
 
-test("TC1: Alta exitosa de nuevo usuario", async ({ page, browserName }) => {
-  // Skip en Chromium y WebKit por inestabilidad de elementos
-  test.skip(browserName === "chromium", "Flaky en Chromium, se omite este test");
-  test.skip(browserName === "webkit", "Flaky en WebKit, se omite este test");
+test("Test Case 1: Alta exitosa de nuevo usuario", async ({ page }) => {
+  //1.Lanzar el navegador
+  //2.Navegar a la URL de la aplicación
+  await page.goto("http://localhost:4200/")
 
-  // 1. Login como Admin
-  await page.goto("http://localhost:4200/");
-  await expect(page.getByRole("link", { name: "Login" })).toBeVisible();
-  await page.getByRole("link", { name: "Login" }).click();
-  await page.waitForURL("**/login");
-  await page.waitForLoadState("networkidle");
-  await page.getByRole("textbox", { name: "Email" }).fill("admin@test.com");
-  await page.getByLabel("Contraseña", { exact: true }).fill("Admin123!$");
-  await page.getByRole("button", { name: "Iniciar sesión" }).click();
-  await page.waitForURL("**/home");
-  await page.waitForLoadState("networkidle");
+  //3.Verificar que se muestre el boton de login
+  await expect(page.getByRole("link", { name: "Login" })).toBeVisible()
+
+  //4.Ir a la página de login
+  await page.getByRole("link", { name: "Login" }).click()
+  await page.waitForURL("**/login")
+  await page.waitForLoadState("networkidle")
+  await expect(page.getByRole("textbox", { name: "Email" })).toBeVisible()
+
+  //5.Iniciar sesión como administrador
+  await page.getByRole("textbox", { name: "Email" }).fill("admin@test.com")
+  await page.getByLabel("Contraseña", { exact: true }).fill("Admin123!$")
+  await page.getByRole("button", { name: "Iniciar sesión" }).click()
+  await page.waitForURL("**/home")
+  await page.waitForLoadState("networkidle")
 
   // 2. Ir al menú "Usuarios"
   await page.locator("mat-toolbar").getByRole("link", { name: "Usuarios" }).click();

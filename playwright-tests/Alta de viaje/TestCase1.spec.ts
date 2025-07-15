@@ -12,8 +12,8 @@ test("Test Case 1: Alta exitosa de un nuevo viaje", async ({ page }) => {
   await expect(page.getByRole("textbox", { name: "Email" })).toBeVisible(); // Asegurar que el campo de email es visible
 
   //4.Iniciar sesión como vendedor
-  await page.getByRole("textbox", { name: "Email" }).fill("usuario1@gmail.com");
-  await page.getByLabel("Contraseña", { exact: true }).fill("Vendedor12!"); // Mejor usar getByLabel para Contraseña
+  await page.getByRole("textbox", { name: "Email" }).fill("vendedor@test.com");
+  await page.getByLabel("Contraseña", { exact: true }).fill("Vend123!$"); // Mejor usar getByLabel para Contraseña
   await page.getByRole("button", { name: "Iniciar sesión" }).click();
   await page.waitForURL("**/home"); // Esperar a que la URL sea la de home después del login
   await page.waitForLoadState("networkidle"); // Esperar a que la red esté inactiva después del login
@@ -29,10 +29,10 @@ test("Test Case 1: Alta exitosa de un nuevo viaje", async ({ page }) => {
 
   //6.Completar todos los campos requeridos del viaje
   await altaViajeModal.locator("mat-form-field", { hasText: "Origen" }).getByRole("combobox").click();
-  await page.getByRole("option", { name: "SALTO - Salto"}).click();
+  await page.getByRole("option", { name: "MALDONADO - Punta del Este"}).click();
 
   await altaViajeModal.locator("mat-form-field", { hasText: "Destino" }).getByRole("combobox").click();
-  await page.getByRole("option", { name: "FLORIDA - Merin" }).click();
+  await page.getByRole("option", { name: "MONTEVIDEO - Terminal Tres Cruces" }).click();
 
   // Campos de fecha dentro del modal
   await altaViajeModal.locator("mat-form-field", { hasText: "Fecha salida" }).getByLabel("Open calendar").click();
@@ -61,5 +61,5 @@ test("Test Case 1: Alta exitosa de un nuevo viaje", async ({ page }) => {
   await altaViajeModal.getByRole("button", { name: "Registrar viaje" }).click();
 
   //8.Verificar que los datos del nuevo viaje se guardan en el sistema
-  await expect(page.getByRole('cell', { name: 'FLORIDA - Merin' }).first()).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'MONTEVIDEO - Terminal Tres Cruces' }).first()).toBeVisible();
 });

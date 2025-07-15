@@ -13,8 +13,8 @@ test('Test Case 2: Intentar registrar un ómnibus con matrícula ya existente', 
   await expect(page.getByRole('textbox', { name: 'Email' })).toBeVisible(); // Asegurar que el campo de email es visible
 
   //4.Iniciar sesión como vendedor
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
-  await page.getByLabel('Contraseña', { exact: true }).fill('Vendedor12!'); // Usar getByLabel es más robusto
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
+  await page.getByLabel('Contraseña', { exact: true }).fill('Vend123!$'); // Usar getByLabel es más robusto
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
   await page.waitForURL('**/home'); // Esperar a que la URL sea la de home después del login
   await page.waitForLoadState('networkidle'); // Esperar a que la red esté inactiva después del login
@@ -34,10 +34,10 @@ test('Test Case 2: Intentar registrar un ómnibus con matrícula ya existente', 
   const matriculaInputField = agregarOmnibusModal.locator('input[formcontrolname="matricula"]');
   await expect(matriculaInputField).toBeVisible(); // Asegurar que el campo está visible en el modal
 
-  await matriculaInputField.fill('Bas5586'); // Usar la matrícula existente 'Bas5586'
+  await matriculaInputField.fill('AAA-1111'); // Usar la matrícula existente 'Bas5586'
 
   await agregarOmnibusModal.getByRole('combobox', { name: 'Ubicación' }).click();
-  await page.getByRole('option', { name: 'FLORIDA - Merin' }).click();
+  await page.getByRole('option', { name: 'MALDONADO - Punta del Este' }).click();
   await agregarOmnibusModal.getByRole('spinbutton', { name: 'Cantidad de Asientos' }).fill('60');
 
   //8.Pulsar "Guardar"

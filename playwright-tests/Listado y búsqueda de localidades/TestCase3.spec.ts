@@ -7,8 +7,8 @@ test.describe('CU 4.3 – Listado y búsqueda de localidades', () => {
         // 1) Login como vendedor
         await page.goto(process.env.BASE_URL || 'http://localhost:4200');
         await page.getByRole('link', { name: 'Login' }).click();
-        await page.getByRole('textbox', { name: 'Email' }).fill('vendedorTest@test.com');
-        await page.getByRole('textbox', { name: 'Contraseña' }).fill('Test1234!');
+        await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
+        await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
         await Promise.all([
             page.waitForURL('**/'),
             page.getByRole('button', { name: 'Iniciar sesión' }).click(),
@@ -22,7 +22,8 @@ test.describe('CU 4.3 – Listado y búsqueda de localidades', () => {
 
         // 3) Aplicar filtros que no existan
         await page.getByRole('textbox', { name: 'Nombre' }).fill('XYZsinMatch');
-        await page.getByRole('textbox', { name: 'Departamento' }).fill('ZZZ');
+        await page.getByRole('combobox', { name: 'Departamento' }).locator('svg').click();
+        await page.getByRole('option', { name: 'ARTIGAS' }).click();
 
         // 4) Pulsar “Continuar”
         await Promise.all([

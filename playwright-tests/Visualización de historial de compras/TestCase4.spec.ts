@@ -11,9 +11,9 @@ test('Test Case 4: No hay compras que coincidan con los filtros aplicados', asyn
 
   //4.Iniciar sesión como cliente
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente_extra2@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Cli123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Seleccionar la opción "Mis compras" en la interfaz

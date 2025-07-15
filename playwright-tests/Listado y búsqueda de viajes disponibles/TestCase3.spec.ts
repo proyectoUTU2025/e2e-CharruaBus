@@ -11,9 +11,9 @@ test('Test Case 3: Búsqueda con filtros parciales', async ({ page }) => {
 
   //4.Ingresar un email y contraseña válidos (vendedor o cliente)
   await page.locator('.mat-mdc-form-field-infix').first().click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('vendedor@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vend123!$');
 
   //5.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
@@ -23,14 +23,13 @@ test('Test Case 3: Búsqueda con filtros parciales', async ({ page }) => {
 
   //7.Ingresar solo un filtro
   await page.getByRole('combobox', { name: 'Origen' }).locator('svg').click();
-  await page.getByRole('option', { name: 'SALTO - Salto' }).click();
+  await page.getByRole('option', { name: 'MALDONADO - Punta del Este' }).click();
 
   //8.Pulsar “Buscar”
   await page.getByRole('button', { name: 'Buscar' }).click();
 
   //9.Verificar que se muestran los resultados correspondientes según el filtro ingresado
-  const cellLocator = page.getByRole('cell', { name: 'SALTO - Salto' })
-  await expect(cellLocator.first()).toBeVisible({ timeout: 15000 })
+  const cellLocator = page.getByRole('cell', { name: 'MALDONADO - Punta del Este' })
   const cells = await cellLocator.all()
 
   await expect(cells.length).toBeGreaterThan(0);
