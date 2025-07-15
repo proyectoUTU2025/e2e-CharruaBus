@@ -1,6 +1,11 @@
 import { test, expect } from '@playwright/test';
+import { getAccountPassword} from '../../utils/PasswordLoader';
+
+const TEST_ACCOUNT = 'testUser1'; // Identificador para la cuenta de prueba
 
 test('Test Case 3: Contraseña actual incorrecta', async ({ page }) => {
+
+  const oldPassword = getAccountPassword(TEST_ACCOUNT);
 
   //1.Lanzar el navegador
   //2.Navegar a la URL de la aplicación 
@@ -18,9 +23,9 @@ test('Test Case 3: Contraseña actual incorrecta', async ({ page }) => {
 
   //6.Ingresar un email y contraseña válidos
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente2@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill(oldPassword);
 
   //7.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();

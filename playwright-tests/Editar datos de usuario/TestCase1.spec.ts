@@ -30,16 +30,16 @@ test('Test Case 1: Modificación exitosa de datos de usuario por el administrado
 
   //4.Iniciar sesión como administrador
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('admin@admin.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('admin@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('admin');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Admin123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Ir al menú "Usuarios"
   await page.locator('mat-toolbar').getByRole('link', { name: 'Usuarios' }).click();
 
   //6.Modificar uno o varios campos del formulario con datos válidos y correctos
-  await page.getByRole('row', { name: '7 Cristian Silva 01/01/2000' }).getByRole('button').first().click();
+  await page.getByRole('row', { name: '7 Cliente3 Test 03/03/1992' }).getByRole('button').first().click();
   const editarUsuarioModal = page.locator('mat-dialog-container', { hasText: 'Editar Usuario' });
   await expect(editarUsuarioModal).toBeVisible(); // Asegurarse de que el modal es visible
 

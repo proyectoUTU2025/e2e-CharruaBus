@@ -18,15 +18,15 @@ test('Test Case 1: Cierre de sesión exitoso', async ({ page }) => {
 
   //6.Ingresar un email y contraseña válidos
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('admin@test.com');
   await page.getByRole('textbox', { name: 'Contraseña' }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Admin123!$');
 
   //7.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
  
   //8.Verificar que el usuario sea redirigido a la pantalla principal según su rol
-  await expect(page.locator('#mat-mdc-chip-0').getByText('CLIENTE')).toBeVisible();
+  await expect(page.locator('#mat-mdc-chip-0').getByText('ADMIN')).toBeVisible();
 
   //9.Hacer clic en “Cerrar sesión” desde el menú o cabecera
   await expect(page.locator('mat-toolbar').getByRole('button', { name: 'Cerrar sesión' })).toBeVisible();

@@ -1,6 +1,15 @@
 import { test, expect } from '@playwright/test';
+import { generarStringAleatorioConRequisitos } from '../../utils/StringRandom.js';
+import { getAccountPassword, setAccountPassword } from '../../utils/PasswordLoader';
+
+const TEST_ACCOUNT = 'testUser1'; // Identificador para la cuenta de prueba
 
 test('Test Case 1: Cambio de contraseña exitoso', async ({ page }) => {
+
+  const oldPassword = getAccountPassword(TEST_ACCOUNT);
+
+  const nuevaContrasena = generarStringAleatorioConRequisitos();
+  console.log(nuevaContrasena);
 
   //1.Lanzar el navegador
   //2.Navegar a la URL de la aplicación
@@ -18,9 +27,9 @@ test('Test Case 1: Cambio de contraseña exitoso', async ({ page }) => {
 
   //6.Ingresar un email y contraseña válidos
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente2@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill(oldPassword);
 
   //7.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
@@ -38,15 +47,16 @@ test('Test Case 1: Cambio de contraseña exitoso', async ({ page }) => {
  
   //11.ngresar la contraseña actual, la nueva contraseña y su confirmación
   await page.getByRole('textbox', { name: 'Contraseña Actual' }).click();
-  await page.getByRole('textbox', { name: 'Contraseña Actual' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña Actual' }).fill(oldPassword);
   await page.getByText('Nueva Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Nueva Contraseña', exact: true }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Nueva Contraseña', exact: true }).fill(nuevaContrasena);
   await page.getByText('Confirmar Nueva Contraseña').click();
-  await page.getByRole('textbox', { name: 'Confirmar Nueva Contraseña' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Confirmar Nueva Contraseña' }).fill(nuevaContrasena);
 
   //12.Pulsar “Confirmar Nueva Contraseña”
   await expect(page.getByRole('button', { name: 'Cambiar Contraseña' })).toBeVisible();
   await page.getByRole('button', { name: 'Cambiar Contraseña' }).click();
+  setAccountPassword(TEST_ACCOUNT, nuevaContrasena);
 
   //13.Verificar que se muestra un mensaje de éxito
   await expect(page.getByText('Contraseña cambiada con éxito.')).toBeVisible();
