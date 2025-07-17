@@ -18,9 +18,9 @@ test('Test Case 1: Login con credenciales válidas', async ({ page }) => {
  
   //6.Ingresar un email y contraseña válidos
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito11!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Cli123!$');
 
   //7.Pulsar el botón "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();

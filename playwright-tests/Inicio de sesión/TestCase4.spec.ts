@@ -18,11 +18,11 @@ test('Test Case 4: Login con cuenta inactiva o bloqueada', async ({ page }) => {
  
   //6.Ingresar un email registrado pero inactivo o no verificado
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('pepe@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente_extra4@test.com');
 
   //7.Ingresar una contraseña válida
   await page.locator('#mat-mdc-form-field-label-1 span').click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Cli123!$');
 
   //8.Pulsar "Iniciar sesión"
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();

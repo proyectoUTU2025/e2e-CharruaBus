@@ -18,7 +18,7 @@ test('Test Case 2: Login con correo incorrecto', async ({ page }) => {
 
   //6.Ingresar un correo electrónico que no está registrado
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('correo88@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('correo1324@test.com');
 
   //7.Ingresar cualquier contraseña
   await page.getByText('Contraseña', { exact: true }).click();

@@ -11,9 +11,9 @@ test('Test Case 3: Ingreso de datos inválidos por el cliente/vendedor', async (
 
   //4.Ingresar un email y contraseña válidos (vendedor o cliente)
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Pepito12!');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Navegar a la sección "Mi perfil"

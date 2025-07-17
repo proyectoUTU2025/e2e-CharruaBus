@@ -18,7 +18,7 @@ test('Test Case 3: Login con contraseña incorrecta', async ({ page }) => {
  
   //6.Ingresar un email registrado
   await page.getByText('Email').click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('gameftjp@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente@test.com');
 
   //7.Ingresar una contraseña incorrecta
   await page.getByText('Contraseña', { exact: true }).click();

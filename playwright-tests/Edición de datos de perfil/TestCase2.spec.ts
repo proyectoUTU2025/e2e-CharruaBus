@@ -11,9 +11,9 @@ test('Test Case 2: Cancelar la edición del perfil', async ({ page }) => {
 
   //4.Ingresar un email y contraseña válidos (vendedor o cliente)
   await page.getByRole('textbox', { name: 'Email' }).click();
-  await page.getByRole('textbox', { name: 'Email' }).fill('usuario1@gmail.com');
+  await page.getByRole('textbox', { name: 'Email' }).fill('cliente2@test.com');
   await page.getByText('Contraseña', { exact: true }).click();
-  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Vendedor12!');
+  await page.getByRole('textbox', { name: 'Contraseña' }).fill('Cli123!$');
   await page.getByRole('button', { name: 'Iniciar sesión' }).click();
 
   //5.Navegar a la sección "Mi perfil"
